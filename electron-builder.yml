@@ -1,0 +1,25 @@
+appId: com.wovenlearning.wovendrone
+productName: WovenDrone
+copyright: Copyright © 2024 Woven Learning and Technology 501.c3
+buildVersion: '0.1.1'
+directories:
+  output: dist
+  buildResources: resources
+files:
+  - from: .
+    filter:
+      - package.json
+      - app
+mac:
+  category: public.app-category.education
+  target:
+    - dmg
+    - zip
+win:
+  target:
+    - nsis
+    - portable
+linux:
+  target:
+    - AppImage
+publish: null

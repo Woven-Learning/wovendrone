@@ -1,0 +1,38 @@
+{
+  "private": true,
+  "name": "wovendrone",
+  "description": "WovenDrone",
+  "version": "0.1.2",
+  "author": "Cy Scott <cscott@gmail.com>",
+  "main": "app/background.js",
+  "scripts": {
+    "dev": "nextron",
+    "prebuild": "node scripts/increment-build.js",
+    "build": "nextron build",
+    "build:mac": "node scripts/increment-build.js && nextron build --mac",
+    "build:win": "node scripts/increment-build.js && nextron build --win",
+    "build:all": "node scripts/increment-build.js && nextron build --mac --win",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "@types/ws": "^8.5.13",
+    "electron-serve": "^1.3.0",
+    "electron-store": "^8.2.0",
+    "lucide-react": "^0.469.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "@types/react": "^18.2.52",
+    "autoprefixer": "^10.4.19",
+    "electron": "^31.7.7",
+    "electron-builder": "^25.1.8",
+    "next": "^14.2.4",
+    "nextron": "^9.4.0",
+    "postcss": "^8.4.38",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.6.3"
+  }
+}
